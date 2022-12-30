@@ -22,10 +22,10 @@ class CarroRequest extends FormRequest
     {
         return [
             'modelo' => "required|min:3|max:100",
-            "ano" => "required|min:4|max:5",
+            "ano" => "required|min:4|max:4",
             'montadora' => "required|min:3|max:100",
             'cor' => "required|min:3|max:25",
-            'placa' => "required|min:8|max:9"
+            'placa' => "required|min:8|max:8"
         ];
     }
 }

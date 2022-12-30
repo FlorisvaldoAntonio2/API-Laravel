@@ -88,8 +88,7 @@ class CarroController extends Controller
         {
             return response()->json([
                 'status' => false,
-                'mensagem' => "Erro ao encontrar o carro - ({$ex->getMessage()})",
-                'dados' => []
+                'mensagem' => "Erro ao encontrar o carro - ({$ex->getMessage()})"
             ],  400);
         }
         
