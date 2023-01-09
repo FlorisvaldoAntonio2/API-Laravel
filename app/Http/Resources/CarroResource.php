@@ -21,6 +21,8 @@ class CarroResource extends JsonResource
             'MONTADORA' => $this->montadora,
             'COR' => $this->cor,
             'PLACA' => $this->placa,
+            'DT_CRIAÇÂO' => $this->created_at,
+            'DT_ATUALIZAÇÂO' => $this->updated_at
         ];
     }
 }

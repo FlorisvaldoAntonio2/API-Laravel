@@ -26,8 +26,7 @@ class CarroController extends Controller
         {
             return response()->json([
                 'status' => false,
-                'mensagem' => "Erro ao encontrar o carro - ({$ex->getMessage()})",
-                'dados' => []
+                'mensagem' => "Erro ao encontrar o carro"
             ],  400);
         }
         return new CarroResource($carro);
@@ -44,16 +43,15 @@ class CarroController extends Controller
         {
             return response()->json([
                 'status' => false,
-                'mensagem' => "Erro no cadastro!!! - ({$ex->getMessage()})",
-                'dados' => []
+                'mensagem' => "Erro no cadastro!!!"
             ],  500);
         }
         
         return response()->json([
             'status' => true,
             'mensagem' => "Cadastrado com sucesso!!!",
-            'dados' => $resultado
-        ],  200);
+            'data' => $resultado
+        ],  201);
     }
 
     public function destroy(int $id)
@@ -66,8 +64,7 @@ class CarroController extends Controller
         {
             return response()->json([
                 'status' => false,
-                'mensagem' => "Erro ao encontrar o carro - ({$ex->getMessage()})",
-                'dados' => []
+                'mensagem' => "Erro ao encontrar o carro"
             ],  400);
         }
 
