@@ -22,8 +22,12 @@ __Para conseguir testar o sistema são necessarios os seguintes requisitos__
 3. Localizar o arquivo *.env.exemplo*, copiar o mesmo retirando o ".exemplo", ficando apenas ".env". nesse arquivo deverá ser configurado de acordo com os dados do seu sistema.
 4. Rodar as migrations, factorys e seeders, __com o comando__:
 > php artisan migrate --seed
-5. Subir o servidor (podemos ser o de sua preferencia), no caso estou usando o serve integrado para teste do php 8.
+5. Subir o servidor (pode ser o de sua preferencia), no caso estou usando o serve integrado para teste do php 8.
 > php artisan serve
+6. (opcional) em uma nova aba/terminal execultar os testes com o comando:
+> php artisan test
+![image](https://user-images.githubusercontent.com/58447450/211375312-58e302b2-38dc-4a8b-8c36-abdc413de9e6.png)
+
 
 ### EndPoints
 
@@ -42,5 +46,6 @@ PUT    | /api/carros/{ID} | Atualiaza o veículo especificado | N/A             
 - Factory
 - Seedeer
 - Resource
+- Testes
 
 
