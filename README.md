@@ -19,12 +19,22 @@ __Para conseguir testar o sistema são necessarios os seguintes requisitos__
 > composer install
 
 > composer update
-3. Localizar o arquivo *.env.exemplo*, copiar o mesmo retirando o ".exemplo", ficando apenas ".env". nesse arquivo deverá ser configurado de acordo com os dados do seu sistema.
+3. Localizar o arquivo *.env.exemplo*, copiar o mesmo retirando o ".exemplo", ficando apenas ".env". nesse arquivo deverá ser configurado de acordo com os dados do seu sistema, OBS: você deverá criar os bancos de dados e informalos no .env, as migrações irão criar apenas as tabelas.
 4. Rodar as migrations, factorys e seeders, __com o comando__:
 > php artisan migrate --seed
 5. Subir o servidor (pode ser o de sua preferencia), no caso estou usando o serve integrado para teste do php 8.
 > php artisan serve
-6. (opcional) em uma nova aba/terminal execultar os testes com o comando:
+6. (opcional) Caso deseje realizar os testes, crie um arquivo .env.testing, e passe as configurações (como porta, nome do banco...), IMPORTANTE: os testes então configurados para limpar os dados após cada sequencia de teste, assim se não cria um novo banco com o novo .env, todos os dados serão perdidos..
+7. (opcional) Executar os comando
+> php artisan --env=testing migrate
+
+Caso tenha algum erro, tente executar os comandos abaixo e repetir o comando acima:
+
+> php artisan cache:clear
+
+> php artisan config:cache 
+
+8. (opcional) em uma nova aba/terminal execultar os testes com o comando:
 > php artisan test
 ![image](https://user-images.githubusercontent.com/58447450/211375312-58e302b2-38dc-4a8b-8c36-abdc413de9e6.png)
 
